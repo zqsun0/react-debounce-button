@@ -52,7 +52,7 @@ function useFallbackId() {
     }, []);
     return idRef.current;
 }
-var DebounceClickButton = function (_a) {
+var DebounceButton = function (_a) {
     var children = _a.children, onClick = _a.onClick, _b = _a.debounceTime, debounceTime = _b === void 0 ? 300 : _b, props = __rest(_a, ["children", "onClick", "debounceTime"]);
     var id = useId ? useId() : useFallbackId();
     var debouncedOnClick = (0, react_1.useCallback)(debounce(function (event) {
@@ -62,4 +62,4 @@ var DebounceClickButton = function (_a) {
     }, debounceTime), [onClick, debounceTime]);
     return ((0, jsx_runtime_1.jsx)("button", __assign({ id: 'react-debounce-button-' + id, onClick: debouncedOnClick }, props, { children: children })));
 };
-exports.default = DebounceClickButton;
+exports.default = DebounceButton;

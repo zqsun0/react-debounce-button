@@ -4,7 +4,7 @@ const debounce = require('lodash/debounce');
 // try to get the useId from 'react', if it doesn't exist, it will be undefined
 const { useId } = require('react');
 
-interface DebounceClickButtonProps extends HTMLAttributes<HTMLButtonElement> {
+interface DebounceButtonProps extends HTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
   debounceTime?: number;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
@@ -38,7 +38,7 @@ function useFallbackId() {
   return idRef.current;
 }
 
-const DebounceClickButton = ({ children, onClick, debounceTime = 300, ...props }: DebounceClickButtonProps) => {
+const DebounceButton = ({ children, onClick, debounceTime = 300, ...props }: DebounceButtonProps) => {
   const id = useId ? useId() : useFallbackId();
 
   const debouncedOnClick = useCallback(
@@ -57,4 +57,4 @@ const DebounceClickButton = ({ children, onClick, debounceTime = 300, ...props }
   );
 };
 
-export default DebounceClickButton;
+export default DebounceButton;
