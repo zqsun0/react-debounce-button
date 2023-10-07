@@ -18,21 +18,21 @@ yarn add react-debounce-button
 ## Usage
 
 ### Step 1: Use the Component
-Simply import and use the DebounceClickButton component in your React application:
+Simply import and use the DebounceButton component in your React application:
 ```jsx
-import DebounceClickButton from 'react-debounce-button';
+import DebounceButton from 'react-debounce-button';
 
 function App() {
     return (
-        <DebounceClickButton onClick={() => console.log("Button clicked!")}>
+        <DebounceButton onClick={() => console.log("Button clicked!")}>
             Click Me!
-        </DebounceClickButton>
+        </DebounceButton>
     );
 }
 ```
-# Props of DebounceClickButton Component
+# Props of DebounceButton Component
 
-The DebounceClickButton component inherits all the properties of a button element, allowing for easy customization and styling. Additionally, it has a specific prop to control the debounce time:
+The DebounceButton component inherits all the properties of a button element, allowing for easy customization and styling. Additionally, it has a specific prop to control the debounce time:
 
 | Prop        | Type                               | Default | Description                                                                                           |
 |-------------|------------------------------------|---------|-------------------------------------------------------------------------------------------------------|
@@ -43,11 +43,11 @@ The DebounceClickButton component inherits all the properties of a button elemen
 You can use other button properties like id, className, and style for further customization:
 
 ```jsx
-import DebounceClickButton from 'react-debounce-button';
+import DebounceButton from 'react-debounce-button';
 
 function ExampleComponent() {
     return (
-        <DebounceClickButton
+        <DebounceButton
             debounceTime={500}
             id='example'
             className='custom-class'
@@ -55,7 +55,7 @@ function ExampleComponent() {
             onClick={() => console.log("Button clicked!")}
         >
             Click Me!
-        </DebounceClickButton>
+        </DebounceButton>
     );
 }
 ```

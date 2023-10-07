@@ -23,7 +23,7 @@ interface DebounceButtonProps extends HTMLAttributes<HTMLButtonElement> {
  * @param {object} props - Component properties
  * @param {React.ReactNode} [props.children] - Button content
  * @param {number} [props.debounceTime=300] - Debounce time in milliseconds. Default is 300ms.
- * @returns {JSX.Element} - DebounceClickButton component
+ * @returns {JSX.Element} - DebounceButton component
  */
 
 function useFallbackId() {

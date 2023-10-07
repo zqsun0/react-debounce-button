@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-button",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React component that elegantly handles multiple rapid clicks to enhance user experience and prevent unintended actions.",
   "main": "dist/index.js",
   "files": [
