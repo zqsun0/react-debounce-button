@@ -1,6 +1,5 @@
-import { HTMLAttributes, ReactNode, useEffect, useRef, useCallback } from 'react';
-import debounce from 'lodash/debounce';
-
+import { HTMLAttributes, ReactNode, useEffect, useRef, useCallback, MouseEvent } from 'react';
+const debounce = require('lodash/debounce');
 // because the useId hook doesn't exist in react@17
 // try to get the useId from 'react', if it doesn't exist, it will be undefined
 const { useId } = require('react');
@@ -8,7 +7,7 @@ const { useId } = require('react');
 interface DebounceClickButtonProps extends HTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
   debounceTime?: number;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
 /**

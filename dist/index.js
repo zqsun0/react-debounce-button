@@ -24,7 +24,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
-var debounce_1 = require("lodash/debounce");
+var debounce = require('lodash/debounce');
 // because the useId hook doesn't exist in react@17
 // try to get the useId from 'react', if it doesn't exist, it will be undefined
 var useId = require('react').useId;
@@ -55,7 +55,7 @@ function useFallbackId() {
 var DebounceClickButton = function (_a) {
     var children = _a.children, onClick = _a.onClick, _b = _a.debounceTime, debounceTime = _b === void 0 ? 300 : _b, props = __rest(_a, ["children", "onClick", "debounceTime"]);
     var id = useId ? useId() : useFallbackId();
-    var debouncedOnClick = (0, react_1.useCallback)((0, debounce_1.default)(function (event) {
+    var debouncedOnClick = (0, react_1.useCallback)(debounce(function (event) {
         if (onClick) {
             onClick(event);
         }
