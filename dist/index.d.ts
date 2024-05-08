@@ -1,5 +1,5 @@
-import { HTMLAttributes, ReactNode, MouseEvent } from 'react';
-interface DebounceButtonProps extends HTMLAttributes<HTMLButtonElement> {
+import { ReactNode, MouseEvent, ButtonHTMLAttributes } from 'react';
+interface DebounceButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode;
     debounceTime?: number;
     onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
